@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+</head>
+
+<body>
+<h2>Click on the kitty image!</h2>
+<div id="image1">
+<img src="kitty.jpg" border=0 name="Kitty!">
+</div>
+
+    <p>You clicked the kitty <span id="counter1">1</span> times</p>
+    
+<button id="reset_counter" type="button">Reset counter</button>
+
+</body>
+    
+<script type="text/javascript">
+
+var counter = 0;
+    
+$(document).ready(function() {
+    
+    $("#image1").click(function(){
+        counter++;
+        $("#counter1").text(counter);
+    });
+    
+    $("#reset_counter").click(function(){
+        counter=0;
+        $("#counter1").text(counter);
+    });
+
+});
+
+</script>
+</html>
